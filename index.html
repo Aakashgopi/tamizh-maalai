@@ -273,6 +273,24 @@
     </button>
   </div>
 </div>
+        <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden cursor-pointer" onclick="showFullImage('https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&w=1000&auto=format')">
+  <div class="relative">
+    <img src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&w=1000&auto=format"
+         alt="செண்பக மாலை"
+         class="w-full h-64 object-cover transition-transform duration-300 ease-in-out hover:scale-105">
+  </div>
+  <div class="p-4">
+    <h3 class="font-bold text-lg">
+      <span lang="en">Orange Blossom Garland</span>
+      <span lang="ta" class="font-tamil">செண்பக மாலை</span>
+    </h3>
+    <p class="text-gray-600 dark:text-gray-300 text-sm mb-2">
+      <span lang="en">Color: Orange | ₹320</span>
+      <span lang="ta" class="font-tamil">நிறம்: ஆரஞ்சு | ₹320</span>
+    </p>
+  </div>
+</div>
+
           <!-- Product 7 -->
         <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
             <div class="relative">
@@ -2043,5 +2061,25 @@
       document.getElementById('modalBackdrop').style.display = 'none';
     }
   </script>
+  <!-- Image Modal -->
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+  <div class="relative max-w-3xl w-full mx-4">
+    <button onclick="closeFullImage()" class="absolute top-2 right-2 text-white text-3xl font-bold z-10">&times;</button>
+    <img id="modalImage" src="" alt="Full Image" class="w-full h-auto rounded-lg shadow-lg">
+  </div>
+</div>
+<script>
+  function showFullImage(src) {
+    const modal = document.getElementById('imageModal');
+    const img = document.getElementById('modalImage');
+    img.src = src;
+    modal.classList.remove('hidden');
+  }
+
+  function closeFullImage() {
+    document.getElementById('imageModal').classList.add('hidden');
+  }
+</script>
+
 </body>
 </html>
