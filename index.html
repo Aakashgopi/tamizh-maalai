@@ -247,7 +247,7 @@
 </div>
    <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
   <div class="relative">
-    <!-- Image with zoom effect on desktop -->
+    <!-- Desktop Zoomable Image -->
     <div class="hidden md:block relative group cursor-zoom-in" onclick="zoomImage(this)">
       <img alt="செண்பக மாலை" 
            class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" 
@@ -255,16 +255,21 @@
       <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
     </div>
     
-    <!-- Simple image for mobile (no zoom) -->
+    <!-- Mobile Simple Image -->
     <a class="md:hidden block" href="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&w=1000&auto=format" target="_blank">
       <img alt="செண்பக மாலை" 
            class="w-full h-64 object-cover" 
            src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&w=1000&auto=format"/>
     </a>
     
-    <!-- Zoom overlay -->
-    <div id="zoomOverlay" class="fixed hidden inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4 cursor-zoom-out">
-      <img id="zoomedImage" class="max-w-full max-h-full object-contain" src="" alt="Zoomed Image">
+    <!-- Zoom Overlay with Close Button -->
+    <div id="zoomOverlay" class="fixed hidden inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+      <div class="relative max-w-[90vw] max-h-[90vh]">
+        <img id="zoomedImage" class="max-w-full max-h-[80vh] object-contain" src="" alt="Zoomed Image">
+        <button onclick="closeZoom()" class="absolute -top-10 right-0 text-white text-2xl hover:text-gray-300 focus:outline-none">
+          ✕
+        </button>
+      </div>
     </div>
   </div>
   
@@ -285,7 +290,7 @@
 </div>
 
 <script>
-// Simple zoom functionality for desktop
+// Zoom function
 function zoomImage(element) {
   const imgSrc = element.querySelector('img').src;
   const zoomOverlay = document.getElementById('zoomOverlay');
@@ -293,32 +298,39 @@ function zoomImage(element) {
   
   zoomedImg.src = imgSrc;
   zoomOverlay.classList.remove('hidden');
-  document.body.style.overflow = 'hidden'; // Prevent scrolling when zoomed
+  document.body.style.overflow = 'hidden';
   
-  // Close zoom when clicking overlay
-  zoomOverlay.onclick = function(e) {
-    if (e.target === zoomOverlay) {
-      zoomOverlay.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-  }
+  // Close with ESC key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeZoom();
+  });
+}
+
+// Close zoom function
+function closeZoom() {
+  const zoomOverlay = document.getElementById('zoomOverlay');
+  zoomOverlay.classList.add('hidden');
+  document.body.style.overflow = '';
+  document.removeEventListener('keydown', closeZoom);
 }
 </script>
 
 <style>
-/* Smooth transitions for the zoom effect */
+/* Animation for zoom */
 #zoomOverlay {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
 }
 #zoomedImage {
-  transition: transform 0.3s ease;
-}
-#zoomOverlay:not(.hidden) #zoomedImage {
-  animation: zoomIn 0.3s ease forwards;
+  animation: zoomIn 0.2s ease forwards;
 }
 @keyframes zoomIn {
-  from { transform: scale(0.9); opacity: 0; }
+  from { transform: scale(0.95); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
+}
+
+/* Close button styling */
+#zoomOverlay button {
+  transition: color 0.2s ease;
 }
 </style>
 <!-- Product 7 -->
