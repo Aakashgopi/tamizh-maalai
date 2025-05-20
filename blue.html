@@ -1,1 +1,166 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Blue Garlands - Thamizh Maalai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Include the same styles and scripts as index.html -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil&display=swap');
+    .font-tamil { font-family: 'Noto Sans Tamil', sans-serif; }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 dark:bg-gray-900 dark:text-gray-200">
+  <!-- Header (same as index.html) -->
+  <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+    <!-- ... same header content as index.html ... -->
+  </header>
 
+  <!-- Blue Garlands Hero Section -->
+  <section class="bg-cover bg-center h-64 flex items-center justify-center text-white relative" style="background-image: url('https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&w=1000&auto=format&fit=crop')">
+    <div class="absolute inset-0 bg-black bg-opacity-50 dark:bg-opacity-70"></div>
+    <div class="text-center relative z-10 p-6 max-w-2xl">
+      <h1 class="text-3xl md:text-4xl font-bold mb-2">
+        <span lang="en">Blue Garlands</span>
+        <span class="font-tamil block mt-2" lang="ta">நீல மாலைகள்</span>
+      </h1>
+      <p class="text-lg">
+        <span lang="en">Unique blue flowers for special occasions</span>
+        <span class="font-tamil block mt-2" lang="ta">சிறப்பு சந்தர்ப்பங்களுக்கான தனித்துவமான நீல மலர்கள்</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Blue Garlands Products -->
+  <section class="py-12 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-8 text-center">
+        <span lang="en">Our Blue Garlands</span>
+        <span class="font-tamil" lang="ta">எங்கள் நீல மாலைகள்</span>
+      </h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <!-- Blue Garland 1 -->
+        <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+          <img alt="Blue Orchid Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&w=1000&auto=format"/>
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-1">
+              <span lang="en">Blue Orchid Garland</span>
+              <span class="font-tamil" lang="ta">நீல ஆர்க்கிட் மாலை</span>
+            </h3>
+            <p class="text-sm mb-2">
+              <span lang="en">Color: <span class="text-blue-600">Blue</span> | ₹350</span>
+              <span class="font-tamil" lang="ta">நிறம்: <span class="text-blue-600">நீலம்</span> | ₹350</span>
+            </p>
+            <button class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 py-2 rounded-md text-sm transition" onclick="openModal('Blue Orchid Garland', 'blue', '350')">
+              <span lang="en">Quick View</span>
+              <span class="font-tamil" lang="ta">விரைவாக காண்க</span>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Blue Garland 2 -->
+        <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+          <img alt="Blue Morning Glory Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&w=1000&auto=format"/>
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-1">
+              <span lang="en">Blue Morning Glory Garland</span>
+              <span class="font-tamil" lang="ta">நீல காகிதப்பூ மாலை</span>
+            </h3>
+            <p class="text-sm mb-2">
+              <span lang="en">Color: <span class="text-blue-600">Blue</span> | ₹280</span>
+              <span class="font-tamil" lang="ta">நிறம்: <span class="text-blue-600">நீலம்</span> | ₹280</span>
+            </p>
+            <button class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 py-2 rounded-md text-sm transition" onclick="openModal('Blue Morning Glory Garland', 'blue', '280')">
+              <span lang="en">Quick View</span>
+              <span class="font-tamil" lang="ta">விரைவாக காண்க</span>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Blue Garland 3 -->
+        <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+          <img alt="Blue Hydrangea Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&w=1000&auto=format"/>
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-1">
+              <span lang="en">Blue Hydrangea Garland</span>
+              <span class="font-tamil" lang="ta">நீல ஹைட்ரேஞ்சா மாலை</span>
+            </h3>
+            <p class="text-sm mb-2">
+              <span lang="en">Color: <span class="text-blue-600">Blue</span> | ₹320</span>
+              <span class="font-tamil" lang="ta">நிறம்: <span class="text-blue-600">நீலம்</span> | ₹320</span>
+            </p>
+            <button class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 py-2 rounded-md text-sm transition" onclick="openModal('Blue Hydrangea Garland', 'blue', '320')">
+              <span lang="en">Quick View</span>
+              <span class="font-tamil" lang="ta">விரைவாக காண்க</span>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Blue Garland 4 -->
+        <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+          <img alt="Blue Lotus Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&w=1000&auto=format"/>
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-1">
+              <span lang="en">Blue Lotus Garland</span>
+              <span class="font-tamil" lang="ta">நீல தாமரை மாலை</span>
+            </h3>
+            <p class="text-sm mb-2">
+              <span lang="en">Color: <span class="text-blue-600">Blue</span> | ₹380</span>
+              <span class="font-tamil" lang="ta">நிறம்: <span class="text-blue-600">நீலம்</span> | ₹380</span>
+            </p>
+            <button class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 py-2 rounded-md text-sm transition" onclick="openModal('Blue Lotus Garland', 'blue', '380')">
+              <span lang="en">Quick View</span>
+              <span class="font-tamil" lang="ta">விரைவாக காண்க</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Description Section -->
+  <section class="py-12 bg-gray-100 dark:bg-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold mb-4">
+          <span lang="en">About Blue Garlands</span>
+          <span class="font-tamil" lang="ta">நீல மாலைகள் பற்றி</span>
+        </h2>
+        <p class="mb-4">
+          <span lang="en">Blue garlands are rare and beautiful, symbolizing tranquility and depth. Our blue flower garlands are perfect for unique events, baby showers, or as decorative pieces.</span>
+          <span class="font-tamil block mt-4" lang="ta">நீல மாலைகள் அரிய மற்றும் அழகானவை, அமைதி மற்றும் ஆழத்தைக் குறிக்கின்றன. எங்கள் நீல மலர் மாலைகள் தனித்துவமான நிகழ்வுகள், குழந்தை பரிசு விழாக்கள் அல்லது அலங்காரப் பொருட்களாக சிறந்தவை.</span>
+        </p>
+        <p>
+          <span lang="en">Each blue garland is carefully crafted to maintain the delicate beauty of these special flowers.</span>
+          <span class="font-tamil block mt-4" lang="ta">ஒவ்வொரு நீல மாலையும் இந்த சிறப்பு மலர்களின் நுட்பமான அழகை பராமரிக்க கவனமாக செய்யப்படுகிறது.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (same as index.html) -->
+  <footer class="bg-gray-800 text-white py-8">
+    <!-- ... same footer content as index.html ... -->
+  </footer>
+
+  <!-- Modal (same as index.html) -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <!-- ... same modal content as index.html ... -->
+  </div>
+
+  <script>
+    // Include the same JavaScript as index.html
+    function openModal(name, color, price) {
+      document.getElementById('modalTitle').textContent = name;
+      document.getElementById('modalColor').textContent = `Color: ${color}`;
+      document.getElementById('modalPrice').textContent = `Price: ₹${price}`;
+      document.getElementById('modalBackdrop').style.display = 'block';
+    }
+    function closeModal() {
+      document.getElementById('modalBackdrop').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
