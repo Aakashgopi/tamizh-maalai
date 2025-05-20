@@ -245,24 +245,24 @@
 </button>
 </div>
 </div>
-    <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
+   <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
   <div class="relative">
     <!-- Image with zoom effect on desktop -->
-    <a class="hidden md:block relative group" href="javascript:void(0)" onclick="zoomImage(this)">
+    <div class="hidden md:block relative group cursor-zoom-in" onclick="zoomImage(this)">
       <img alt="செண்பக மாலை" 
-           class="w-full h-64 object-cover cursor-zoom-in transition-transform duration-300 group-hover:scale-105" 
+           class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" 
            src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&w=1000&auto=format"/>
       <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-    </a>
+    </div>
     
     <!-- Simple image for mobile (no zoom) -->
-    <a class="md:hidden" href="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&w=1000&auto=format" target="_blank">
+    <a class="md:hidden block" href="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&w=1000&auto=format" target="_blank">
       <img alt="செண்பக மாலை" 
            class="w-full h-64 object-cover" 
            src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&w=1000&auto=format"/>
     </a>
     
-    <!-- Zoom overlay (hidden by default) -->
+    <!-- Zoom overlay -->
     <div id="zoomOverlay" class="fixed hidden inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4 cursor-zoom-out">
       <img id="zoomedImage" class="max-w-full max-h-full object-contain" src="" alt="Zoomed Image">
     </div>
@@ -293,15 +293,14 @@ function zoomImage(element) {
   
   zoomedImg.src = imgSrc;
   zoomOverlay.classList.remove('hidden');
+  document.body.style.overflow = 'hidden'; // Prevent scrolling when zoomed
   
   // Close zoom when clicking overlay
-  zoomOverlay.onclick = function() {
-    zoomOverlay.classList.add('hidden');
-  }
-  
-  // Prevent clicks on the image from closing the overlay
-  zoomedImg.onclick = function(e) {
-    e.stopPropagation();
+  zoomOverlay.onclick = function(e) {
+    if (e.target === zoomOverlay) {
+      zoomOverlay.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
   }
 }
 </script>
