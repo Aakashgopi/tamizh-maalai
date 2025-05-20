@@ -228,104 +228,7 @@
 <!-- Product 7 -->
 <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
 <div class="relative">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></a>
-</div>
-<div class="p-4">
-<h3 class="font-bold text-lg">
-<span lang="en">Orange Blossom Garland</span>
-<span class="font-tamil" lang="ta">செண்பக மாலை</span>
-</h3>
-<p class="text-gray-600 dark:text-gray-300 text-sm mb-2">
-<span lang="en">Color: Orange | ₹320</span>
-<span class="font-tamil" lang="ta">நிறம்: ஆரஞ்சு | ₹320</span>
-</p>
-<button class="w-full bg-secondary-100 hover:bg-secondary-200 dark:bg-secondary-800 dark:hover:bg-secondary-900 py-2 rounded-md text-sm transition" onclick="openModal('Orange Blossom Garland', 'orange', '320')">
-<span lang="en">Quick View</span>
-<span class="font-tamil" lang="ta">விரைவாக காண்க</span>
-</button>
-</div>
-</div>
-    <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
-  <div class="relative">
-    <!-- Clickable Image -->
-    <div class="cursor-pointer" onclick="showFullScreen(this)">
-      <img alt="செண்பக மாலை" 
-           class="w-full h-64 object-cover" 
-           src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&w=1000&auto=format"/>
-    </div>
-    
-    <!-- Full Screen Overlay -->
-    <div id="fullscreenOverlay" class="fixed hidden inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center p-4">
-      <div class="relative w-full h-full flex items-center justify-center">
-        <img id="fullscreenImage" class="max-w-full max-h-full object-contain" src="" alt="Fullscreen Image">
-        <button onclick="closeFullScreen()" class="absolute top-6 right-6 text-white text-4xl hover:text-gray-300 focus:outline-none">
-          ✕
-        </button>
-      </div>
-    </div>
-  </div>
-  
-  <div class="p-4">
-    <h3 class="font-bold text-lg">
-      <span lang="en">Orange Blossom Garland</span>
-      <span class="font-tamil" lang="ta">செண்பக மாலை</span>
-    </h3>
-    <p class="text-gray-600 dark:text-gray-300 text-sm mb-2">
-      <span lang="en">Color: Orange | ₹320</span>
-      <span class="font-tamil" lang="ta">நிறம்: ஆரஞ்சு | ₹320</span>
-    </p>
-    <button class="w-full bg-secondary-100 hover:bg-secondary-200 dark:bg-secondary-800 dark:hover:bg-secondary-900 py-2 rounded-md text-sm transition" onclick="openModal('Orange Blossom Garland', 'orange', '320')">
-      <span lang="en">Quick View</span>
-      <span class="font-tamil" lang="ta">விரைவாக காண்க</span>
-    </button>
-  </div>
-</div>
-
-<script>
-function showFullScreen(element) {
-  const imgSrc = element.querySelector('img').src;
-  const overlay = document.getElementById('fullscreenOverlay');
-  const fullscreenImg = document.getElementById('fullscreenImage');
-  
-  fullscreenImg.src = imgSrc;
-  overlay.classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-  
-  // Close with ESC key
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeFullScreen();
-  });
-}
-
-function closeFullScreen() {
-  const overlay = document.getElementById('fullscreenOverlay');
-  overlay.classList.add('hidden');
-  document.body.style.overflow = '';
-}
-</script>
-
-<style>
-#fullscreenOverlay {
-  transition: opacity 0.3s ease;
-}
-#fullscreenImage {
-  animation: fadeIn 0.3s ease forwards;
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-#fullscreenOverlay button {
-  transition: transform 0.2s ease;
-}
-#fullscreenOverlay button:hover {
-  transform: scale(1.2);
-}
-</style>
-<!-- Product 7 -->
-<div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
-<div class="relative">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></a>
+<div class="cursor-pointer" onclick="showFullScreen(this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></div>
 </div>
 <div class="p-4">
 <h3 class="font-bold text-lg">
@@ -345,7 +248,7 @@ function closeFullScreen() {
 <!-- Product 7 -->
 <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
 <div class="relative">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></a>
+<div class="cursor-pointer" onclick="showFullScreen(this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></div>
 </div>
 <div class="p-4">
 <h3 class="font-bold text-lg">
@@ -365,7 +268,7 @@ function closeFullScreen() {
 <!-- Product 7 -->
 <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
 <div class="relative">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></a>
+<div class="cursor-pointer" onclick="showFullScreen(this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></div>
 </div>
 <div class="p-4">
 <h3 class="font-bold text-lg">
@@ -385,7 +288,7 @@ function closeFullScreen() {
 <!-- Product 7 -->
 <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
 <div class="relative">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></a>
+<div class="cursor-pointer" onclick="showFullScreen(this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></div>
 </div>
 <div class="p-4">
 <h3 class="font-bold text-lg">
@@ -405,7 +308,7 @@ function closeFullScreen() {
 <!-- Product 7 -->
 <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
 <div class="relative">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></a>
+<div class="cursor-pointer" onclick="showFullScreen(this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></div>
 </div>
 <div class="p-4">
 <h3 class="font-bold text-lg">
@@ -425,7 +328,7 @@ function closeFullScreen() {
 <!-- Product 7 -->
 <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
 <div class="relative">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></a>
+<div class="cursor-pointer" onclick="showFullScreen(this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></div>
 </div>
 <div class="p-4">
 <h3 class="font-bold text-lg">
@@ -445,7 +348,7 @@ function closeFullScreen() {
 <!-- Product 7 -->
 <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
 <div class="relative">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></a>
+<div class="cursor-pointer" onclick="showFullScreen(this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></div>
 </div>
 <div class="p-4">
 <h3 class="font-bold text-lg">
@@ -465,7 +368,7 @@ function closeFullScreen() {
 <!-- Product 7 -->
 <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
 <div class="relative">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></a>
+<div class="cursor-pointer" onclick="showFullScreen(this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></div>
 </div>
 <div class="p-4">
 <h3 class="font-bold text-lg">
@@ -485,7 +388,27 @@ function closeFullScreen() {
 <!-- Product 7 -->
 <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
 <div class="relative">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></a>
+<div class="cursor-pointer" onclick="showFullScreen(this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-lg">
+<span lang="en">Orange Blossom Garland</span>
+<span class="font-tamil" lang="ta">செண்பக மாலை</span>
+</h3>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-2">
+<span lang="en">Color: Orange | ₹320</span>
+<span class="font-tamil" lang="ta">நிறம்: ஆரஞ்சு | ₹320</span>
+</p>
+<button class="w-full bg-secondary-100 hover:bg-secondary-200 dark:bg-secondary-800 dark:hover:bg-secondary-900 py-2 rounded-md text-sm transition" onclick="openModal('Orange Blossom Garland', 'orange', '320')">
+<span lang="en">Quick View</span>
+<span class="font-tamil" lang="ta">விரைவாக காண்க</span>
+</button>
+</div>
+</div>
+<!-- Product 7 -->
+<div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
+<div class="relative">
+<div class="cursor-pointer" onclick="showFullScreen(this)"><img alt="செண்பக மாலை" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></div>
 </div>
 <div class="p-4">
 <h3 class="font-bold text-lg">
@@ -505,7 +428,7 @@ function closeFullScreen() {
 <!-- Product 2 -->
 <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
 <div class="relative">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="வெள்ளை மாலை" class="w-full h-64 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<div class="cursor-pointer" onclick="showFullScreen(this)"><img alt="வெள்ளை மாலை" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></div>
 <span class="absolute top-2 left-2 bg-blue-600 text-white px-2 py-1 rounded-full text-xs">Trending</span>
 </div>
 <div class="p-4">
@@ -536,7 +459,7 @@ function closeFullScreen() {
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 <!-- Product 1 (Red) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="Red Jasmine Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="Red Jasmine Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">Red Jasmine Garland</span>
@@ -554,7 +477,7 @@ function closeFullScreen() {
 </div>
 <!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -572,7 +495,7 @@ function closeFullScreen() {
 </div>
 <!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -590,7 +513,7 @@ function closeFullScreen() {
 </div>
 <!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -608,7 +531,7 @@ function closeFullScreen() {
 </div>
 <!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -626,7 +549,7 @@ function closeFullScreen() {
 </div>
 <!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -644,7 +567,7 @@ function closeFullScreen() {
 </div>
 <!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -662,7 +585,7 @@ function closeFullScreen() {
 </div>
 <!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -680,7 +603,7 @@ function closeFullScreen() {
 </div>
 <!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -698,7 +621,7 @@ function closeFullScreen() {
 </div>
 <!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -716,7 +639,7 @@ function closeFullScreen() {
 </div>
 <!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -734,7 +657,7 @@ function closeFullScreen() {
 </div>
 <!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -751,7 +674,7 @@ function closeFullScreen() {
 </div>
 </div><!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -768,7 +691,7 @@ function closeFullScreen() {
 </div>
 </div><!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -785,7 +708,7 @@ function closeFullScreen() {
 </div>
 </div><!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -802,7 +725,7 @@ function closeFullScreen() {
 </div>
 </div><!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -819,7 +742,7 @@ function closeFullScreen() {
 </div>
 </div><!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -836,7 +759,7 @@ function closeFullScreen() {
 </div>
 </div><!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -853,7 +776,7 @@ function closeFullScreen() {
 </div>
 </div><!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -870,7 +793,7 @@ function closeFullScreen() {
 </div>
 </div><!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -887,7 +810,7 @@ function closeFullScreen() {
 </div>
 </div><!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -904,7 +827,7 @@ function closeFullScreen() {
 </div>
 </div><!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -921,7 +844,7 @@ function closeFullScreen() {
 </div>
 </div><!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -938,7 +861,7 @@ function closeFullScreen() {
 </div>
 </div><!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -955,7 +878,7 @@ function closeFullScreen() {
 </div>
 </div><!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -972,7 +895,7 @@ function closeFullScreen() {
 </div>
 </div><!-- Product 2 (White) -->
 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-<a class="hidden md:block" href="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format" onclick="openZoom(event, this)"><img alt="White Lily Garland" class="w-full h-60 object-cover cursor-zoom-in" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/></a>
+<img alt="White Lily Garland" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1560717843-7b983a86df76?q=80&amp;w=1000&amp;auto=format"/>
 <div class="p-4">
 <h3 class="font-bold text-lg mb-1">
 <span lang="en">White Lily Garland</span>
@@ -1063,26 +986,57 @@ function closeFullScreen() {
     }
   </script>
 
-<div class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden items-center justify-center" id="zoomModal">
-<img class="max-w-4xl w-full max-h-[90vh] object-contain" id="zoomImage" src=""/>
+<!-- Full Screen Overlay (Global) -->
+<div class="fixed hidden inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center p-4" id="fullscreenOverlay">
+<div class="relative w-full h-full flex items-center justify-center">
+<img alt="Fullscreen Image" class="max-w-full max-h-full object-contain" id="fullscreenImage" src=""/>
+<button class="absolute top-6 right-6 text-white text-4xl hover:text-gray-300 focus:outline-none" onclick="closeFullScreen()">
+          ✕
+        </button>
+</div>
 </div>
 
 <script>
-  function openZoom(event, el) {
-    event.preventDefault();
-    const imgSrc = el.getAttribute('href');
-    const zoomModal = document.getElementById('zoomModal');
-    const zoomImage = document.getElementById('zoomImage');
-    zoomImage.src = imgSrc;
-    zoomModal.classList.remove('hidden');
-  }
+function showFullScreen(element) {
+  const imgSrc = element.querySelector('img').src;
+  const overlay = document.getElementById('fullscreenOverlay');
+  const fullscreenImg = document.getElementById('fullscreenImage');
 
-  document.addEventListener('click', function (e) {
-    const modal = document.getElementById('zoomModal');
-    if (!document.getElementById('zoomImage').contains(e.target)) {
-      modal.classList.add('hidden');
+  fullscreenImg.src = imgSrc;
+  overlay.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+
+  document.addEventListener('keydown', function escClose(e) {
+    if (e.key === 'Escape') {
+      closeFullScreen();
+      document.removeEventListener('keydown', escClose);
     }
   });
+}
+
+function closeFullScreen() {
+  const overlay = document.getElementById('fullscreenOverlay');
+  overlay.classList.add('hidden');
+  document.body.style.overflow = '';
+}
 </script>
+<style>
+#fullscreenOverlay {
+  transition: opacity 0.3s ease;
+}
+#fullscreenImage {
+  animation: fadeIn 0.3s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+#fullscreenOverlay button {
+  transition: transform 0.2s ease;
+}
+#fullscreenOverlay button:hover {
+  transform: scale(1.2);
+}
+</style>
 </body>
 </html>
