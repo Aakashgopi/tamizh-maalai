@@ -245,6 +245,83 @@
 </button>
 </div>
 </div>
+    <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
+  <div class="relative">
+    <!-- Image with zoom effect on desktop -->
+    <a class="hidden md:block relative group" href="javascript:void(0)" onclick="zoomImage(this)">
+      <img alt="செண்பக மாலை" 
+           class="w-full h-64 object-cover cursor-zoom-in transition-transform duration-300 group-hover:scale-105" 
+           src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&w=1000&auto=format"/>
+      <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+    </a>
+    
+    <!-- Simple image for mobile (no zoom) -->
+    <a class="md:hidden" href="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&w=1000&auto=format" target="_blank">
+      <img alt="செண்பக மாலை" 
+           class="w-full h-64 object-cover" 
+           src="https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&w=1000&auto=format"/>
+    </a>
+    
+    <!-- Zoom overlay (hidden by default) -->
+    <div id="zoomOverlay" class="fixed hidden inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4 cursor-zoom-out">
+      <img id="zoomedImage" class="max-w-full max-h-full object-contain" src="" alt="Zoomed Image">
+    </div>
+  </div>
+  
+  <div class="p-4">
+    <h3 class="font-bold text-lg">
+      <span lang="en">Orange Blossom Garland</span>
+      <span class="font-tamil" lang="ta">செண்பக மாலை</span>
+    </h3>
+    <p class="text-gray-600 dark:text-gray-300 text-sm mb-2">
+      <span lang="en">Color: Orange | ₹320</span>
+      <span class="font-tamil" lang="ta">நிறம்: ஆரஞ்சு | ₹320</span>
+    </p>
+    <button class="w-full bg-secondary-100 hover:bg-secondary-200 dark:bg-secondary-800 dark:hover:bg-secondary-900 py-2 rounded-md text-sm transition" onclick="openModal('Orange Blossom Garland', 'orange', '320')">
+      <span lang="en">Quick View</span>
+      <span class="font-tamil" lang="ta">விரைவாக காண்க</span>
+    </button>
+  </div>
+</div>
+
+<script>
+// Simple zoom functionality for desktop
+function zoomImage(element) {
+  const imgSrc = element.querySelector('img').src;
+  const zoomOverlay = document.getElementById('zoomOverlay');
+  const zoomedImg = document.getElementById('zoomedImage');
+  
+  zoomedImg.src = imgSrc;
+  zoomOverlay.classList.remove('hidden');
+  
+  // Close zoom when clicking overlay
+  zoomOverlay.onclick = function() {
+    zoomOverlay.classList.add('hidden');
+  }
+  
+  // Prevent clicks on the image from closing the overlay
+  zoomedImg.onclick = function(e) {
+    e.stopPropagation();
+  }
+}
+</script>
+
+<style>
+/* Smooth transitions for the zoom effect */
+#zoomOverlay {
+  transition: opacity 0.3s ease;
+}
+#zoomedImage {
+  transition: transform 0.3s ease;
+}
+#zoomOverlay:not(.hidden) #zoomedImage {
+  animation: zoomIn 0.3s ease forwards;
+}
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+</style>
 <!-- Product 7 -->
 <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
 <div class="relative">
