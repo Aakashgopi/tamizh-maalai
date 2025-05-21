@@ -58,50 +58,53 @@
       top: 0;
     }
 
-    header {
-      background: var(--primary-color);
-      color: var(--white);
-      padding: 1.5rem 2rem;
-      text-align: center;
-      box-shadow: var(--shadow);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+  header {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    }
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0; /* Remove default margins */
+}
 
-    nav a {
-      color: var(--white);
-      font-weight: 500;
-      text-decoration: none;
-      font-size: 1.1rem;
-      padding: 0.5rem 1rem;
-      border-radius: var(--border-radius);
-      transition: var(--transition);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
+nav {
+  display: flex;
+  gap: 1rem;
+}
 
-    nav a:hover, nav a:focus {
-      background: rgba(255, 255, 255, 0.2);
-      outline: none;
-    }
+nav a {
+  color: var(--white);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
+nav a:hover, nav a:focus {
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
     .hero {
       background: /*linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),*/ 
                   url('https://i.pinimg.com/736x/53/79/34/5379344ed3570695b2962f07359a028a.jpg') no-repeat center center/cover;
@@ -464,17 +467,16 @@
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <header>
-  <h1>Tamizh Garlands</h1>
-  <nav>
-    <a href="#gallery">
-      <i class="fas fa-images" aria-hidden="true"></i> Gallery
-    </a>
-    <a href="#contact">
-      <i class="fas fa-envelope" aria-hidden="true"></i> Contact
+  <div class="header-container">
+    <nav>
+      <a href="#gallery"><i class="fas fa-images" aria-hidden="true"></i> Gallery</a>
+      <a href="#contact"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a>
       <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Our Instagram">
-      <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
-    </a>
-  </nav>
+        <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+      </a>
+    </nav>
+    <h1>Tamizh-Garlands</h1>
+  </div>
 </header>
 
   <main id="main-content">
