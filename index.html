@@ -41,7 +41,228 @@
     }
 
     .hero {
+      background: url('<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dindigul Wedding Garlands</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff8f2;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #8b0000;
+      color: white;
+      padding: 1.5em 2em;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+    }
+
+    nav a {
+      margin: 0 20px;
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+
+    .hero {
       background: url('https://images.unsplash.com/photo-1621570079786-7b0fbcdb79f2') no-repeat center center/cover;
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: #8b0000;
+    }
+
+    .models-count {
+      font-size: 1em;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .item {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .item img {
+      width: 100%;
+      height: auto;
+      max-height: 280px;
+      object-fit: cover;
+    }
+
+    .item h3 {
+      padding: 15px;
+      color: #b71c1c;
+      font-size: 1.2em;
+    }
+
+    .contact {
+      max-width: 700px;
+      margin: auto;
+      background: #fff3f0;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .contact h2 {
+      color: #c62828;
+    }
+
+    .contact p {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+
+    footer {
+      background: #8b0000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dindigul Handcrafted Garlands</h1>
+    <nav>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Elegant Wedding Garlands</h1>
+    <p>Crafted in Dindigul. Cherished across Tamil Nadu.</p>
+  </section>
+
+  <section class="section" id="gallery">
+    <h2>Our Garlands</h2>
+    <p class="models-count">25 models available</p>
+    <p>Select a model number and inform your event organizer.</p>
+    <div class="gallery">
+      <!-- Images are inserted via script -->
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="contact">
+      <h2>Contact Us</h2>
+      <p><strong>Location:</strong> Dindigul, Tamil Nadu</p>
+      <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
+      <p><strong>Email:</strong> <a href="mailto:dindigulgarlands@example.com">dindigulgarlands@example.com</a></p>
+      <p><strong>Note:</strong> Showcase only. We work with event managers. Mention the model number to place an order.</p>
+    </div>
+  </section>
+
+  <a class="whatsapp-button" href="https://wa.me/919876543210" target="_blank" title="Chat with us on WhatsApp">
+    &#128222;
+  </a>
+
+  <footer>
+    &copy; 2025 Dindigul Wedding Garlands. Tradition meets elegance.
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const gallery = document.querySelector(".gallery");
+      const imageList = Array.from({ length: 25 }, (_, i) => `https://via.placeholder.com/400x300?text=Model+${i + 1}`);
+
+      imageList.forEach((src, index) => {
+        const div = document.createElement("div");
+        div.className = "item";
+
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = `Garland ${index + 1}`;
+
+        const h3 = document.createElement("h3");
+        h3.textContent = `Model #${index + 1}`;
+
+        div.appendChild(img);
+        div.appendChild(h3);
+        gallery.appendChild(div);
+      });
+    });
+  </script>
+</body>
+</html>
+') no-repeat center center/cover;
       color: #fff;
       padding: 100px 20px;
       text-align: center;
