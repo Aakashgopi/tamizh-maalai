@@ -26,12 +26,10 @@
       padding: 1.5em 2em;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      position: relative;
     }
 
     header h1 {
       font-size: 2.5em;
-      margin-bottom: 0.2em;
     }
 
     nav {
@@ -44,7 +42,6 @@
       font-weight: 500;
       text-decoration: none;
       font-size: 1.1em;
-      transition: color 0.3s;
     }
 
     nav a:hover {
@@ -52,8 +49,7 @@
     }
 
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                  url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e') no-repeat center center/cover;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e') no-repeat center center/cover;
       color: #fff;
       padding: 120px 20px;
       text-align: center;
@@ -62,13 +58,12 @@
     .hero h1 {
       font-size: 3em;
       text-shadow: 1px 1px 3px #000;
-      margin-bottom: 15px;
     }
 
     .hero p {
       font-size: 1.3em;
       max-width: 700px;
-      margin: 0 auto;
+      margin: 15px auto 0;
     }
 
     .section {
@@ -116,6 +111,8 @@
       overflow: hidden;
       transition: transform 0.3s, box-shadow 0.3s;
       position: relative;
+      animation: fadeIn 0.6s ease-out forwards;
+      opacity: 0;
     }
 
     .item:hover {
@@ -127,11 +124,7 @@
       width: 100%;
       height: 280px;
       object-fit: cover;
-      transition: transform 0.5s;
-    }
-
-    .item:hover img {
-      transform: scale(1.05);
+      display: block;
     }
 
     .item h3 {
@@ -175,7 +168,6 @@
       color: #8b0000;
       font-weight: 500;
       text-decoration: none;
-      transition: color 0.3s;
     }
 
     .contact a:hover {
@@ -207,29 +199,12 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       z-index: 1000;
       text-decoration: none;
-      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .whatsapp-button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    }
-
-    /* Loading animation */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
-    .item {
-      animation: fadeIn 0.5s ease-out forwards;
-      opacity: 0;
-    }
-
-    /* Delay animations for each item */
-    .item:nth-child(1) { animation-delay: 0.1s; }
-    .item:nth-child(2) { animation-delay: 0.2s; }
-    /* Continue for all 25 items... */
   </style>
 </head>
 <body>
@@ -248,11 +223,9 @@
 
   <section class="section" id="gallery">
     <h2>Our Garland Collection</h2>
-    <p class="models-count">25 Exquisite Designs Available</p>
+    <p class="models-count">10 Exquisite Designs Available</p>
     <p>Select your favorite model and share the number with your event organizer.</p>
-    <div class="gallery">
-      <!-- Images will be inserted here by JavaScript -->
-    </div>
+    <div class="gallery"></div>
   </section>
 
   <section class="section" id="contact">
@@ -275,75 +248,48 @@
   </footer>
 
   <script>
-    <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const gallery = document.querySelector(".gallery");
+    document.addEventListener("DOMContentLoaded", () => {
+      const gallery = document.querySelector(".gallery");
+      const imageList = [
+        "https://i.pinimg.com/736x/dd/76/69/dd7669cd578d4492e52234fbdfcced7e.jpg",
+        "https://i.pinimg.com/736x/bc/e6/29/bce62947c7ea73316503a1441b726456.jpg",
+        "https://i.pinimg.com/736x/e4/cd/15/e4cd1534c6f0d22b1cfbc9e5a64d1899.jpg",
+        "https://i.pinimg.com/736x/3b/7b/95/3b7b950fca3ae9f3f84b5d2ddbd16bc1.jpg",
+        "https://i.pinimg.com/736x/5e/02/bb/5e02bb032ecdc14e7ce256f9fdf8b861.jpg",
+        "https://i.pinimg.com/736x/c7/4b/1c/c74b1c53796c9307dbb6886ea770de2f.jpg",
+        "https://i.pinimg.com/736x/9f/38/23/9f3823e9ff728a62434c7d4d5d0f3fe1.jpg",
+        "https://i.pinimg.com/736x/e5/92/f6/e592f6841c2933d3e26e74b2303fe9c1.jpg",
+        "https://i.pinimg.com/736x/cd/69/47/cd69473f3cc353ea92765a52a9d10833.jpg",
+        "https://i.pinimg.com/736x/85/f3/b6/85f3b6dc0a6c7dcf9a243f7c1f7e2bd3.jpg"
+      ];
 
-    const imageList = [
-      "https://i.pinimg.com/736x/dd/76/69/dd7669cd578d4492e52234fbdfcced7e.jpg",
-      "https://i.pinimg.com/736x/bc/e6/29/bce62947c7ea73316503a1441b726456.jpg",
-      "https://i.pinimg.com/736x/e4/cd/15/e4cd1534c6f0d22b1cfbc9e5a64d1899.jpg",
-      "https://i.pinimg.com/736x/3b/7b/95/3b7b950fca3ae9f3f84b5d2ddbd16bc1.jpg",
-      "https://i.pinimg.com/736x/5e/02/bb/5e02bb032ecdc14e7ce256f9fdf8b861.jpg",
-      "https://i.pinimg.com/736x/c7/4b/1c/c74b1c53796c9307dbb6886ea770de2f.jpg",
-      "https://i.pinimg.com/736x/9f/38/23/9f3823e9ff728a62434c7d4d5d0f3fe1.jpg",
-      "https://i.pinimg.com/736x/e5/92/f6/e592f6841c2933d3e26e74b2303fe9c1.jpg",
-      "https://i.pinimg.com/736x/cd/69/47/cd69473f3cc353ea92765a52a9d10833.jpg",
-      "https://i.pinimg.com/736x/85/f3/b6/85f3b6dc0a6c7dcf9a243f7c1f7e2bd3.jpg"
-      // Add more verified working links here (avoid broken or repeated ones)
-    ];
+      imageList.forEach((src, index) => {
+        const div = document.createElement("div");
+        div.className = "item";
+        div.style.animationDelay = `${index * 0.1}s`;
 
-    imageList.forEach((src, index) => {
-      const div = document.createElement("div");
-      div.className = "item";
-      div.style.animationDelay = `${index * 0.1}s`;
+        const img = new Image();
+        img.src = src;
+        img.alt = `Garland Model ${index + 1}`;
+        img.loading = "lazy";
 
-      const imgWrapper = document.createElement("div");
-      imgWrapper.style.position = "relative";
-      imgWrapper.style.height = "280px";
-      imgWrapper.style.background = "#fff8f2 url('https://i.stack.imgur.com/h6viz.gif') center center no-repeat";
-      imgWrapper.style.backgroundSize = "30px";
-      imgWrapper.style.overflow = "hidden";
+        img.onerror = function () {
+          this.src = `https://via.placeholder.com/400x280/fff8f2/8b0000?text=Garland+${index + 1}`;
+        };
 
-      const img = new Image();
-      img.src = src;
-      img.alt = `Garland Model ${index + 1}`;
-      img.loading = "lazy";
-      img.style.width = "100%";
-      img.style.height = "100%";
-      img.style.objectFit = "cover";
-      img.style.opacity = "0";
-      img.style.transition = "opacity 0.5s ease-in-out";
+        const modelNumber = document.createElement("div");
+        modelNumber.className = "model-number";
+        modelNumber.textContent = `#${index + 1}`;
 
-      img.onload = () => {
-        img.style.opacity = "1";
-        imgWrapper.style.background = "none";
-      };
+        const h3 = document.createElement("h3");
+        h3.textContent = `Model ${index + 1}`;
 
-      img.onerror = function () {
-        console.error(`Failed to load image ${index + 1}`);
-        this.src = `https://via.placeholder.com/400x280/fff8f2/8b0000?text=Garland+${index + 1}`;
-        this.alt = `Placeholder for Garland Model ${index + 1}`;
-        imgWrapper.style.background = "none";
-        this.style.opacity = "1";
-      };
-
-      const modelNumber = document.createElement("div");
-      modelNumber.className = "model-number";
-      modelNumber.textContent = `#${index + 1}`;
-
-      const h3 = document.createElement("h3");
-      h3.textContent = `Model ${index + 1}`;
-
-      imgWrapper.appendChild(img);
-      div.appendChild(imgWrapper);
-      div.appendChild(modelNumber);
-      div.appendChild(h3);
-      gallery.appendChild(div);
+        div.appendChild(img);
+        div.appendChild(modelNumber);
+        div.appendChild(h3);
+        gallery.appendChild(div);
+      });
     });
-  });
-</script>
-
   </script>
 </body>
 </html>
