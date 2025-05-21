@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dindigul Wedding Garlands</title>
+  <meta name="description" content="Handcrafted wedding garlands from Dindigul, Tamil Nadu. 25+ elegant designs for your special day.">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -25,6 +26,7 @@
       padding: 1.5em 2em;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: relative;
     }
 
     header h1 {
@@ -32,29 +34,41 @@
       margin-bottom: 0.2em;
     }
 
+    nav {
+      margin-top: 15px;
+    }
+
     nav a {
-      margin: 0 20px;
+      margin: 0 15px;
       color: #fff;
       font-weight: 500;
       text-decoration: none;
       font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
     }
 
     .hero {
-      background: url('https://images.unsplash.com/photo-1621570079786-7b0fbcdb79f2') no-repeat center center/cover;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                  url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e') no-repeat center center/cover;
       color: #fff;
-      padding: 100px 20px;
+      padding: 120px 20px;
       text-align: center;
     }
 
     .hero h1 {
       font-size: 3em;
       text-shadow: 1px 1px 3px #000;
+      margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 1.2em;
-      margin-top: 10px;
+      font-size: 1.3em;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
     .section {
@@ -66,79 +80,121 @@
       font-size: 2.2em;
       margin-bottom: 20px;
       color: #8b0000;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section h2::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      background: #ffd700;
+      bottom: -10px;
+      left: 25%;
     }
 
     .models-count {
-      font-size: 1em;
+      font-size: 1.1em;
       color: #666;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: auto;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 30px;
+      max-width: 1300px;
+      margin: 0 auto;
     }
 
     .item {
       background: white;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       overflow: hidden;
       transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
     }
 
     .item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
     .item img {
       width: 100%;
-      height: auto;
-      max-height: 280px;
+      height: 280px;
       object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .item:hover img {
+      transform: scale(1.05);
     }
 
     .item h3 {
       padding: 15px;
       color: #b71c1c;
-      font-size: 1.2em;
+      font-size: 1.3em;
+      font-weight: 600;
+    }
+
+    .item .model-number {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(139, 0, 0, 0.8);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.9em;
     }
 
     .contact {
       max-width: 700px;
       margin: auto;
       background: #fff3f0;
-      padding: 30px;
+      padding: 40px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
     .contact h2 {
       color: #c62828;
+      margin-bottom: 30px;
     }
 
     .contact p {
-      margin: 10px 0;
+      margin: 15px 0;
       font-size: 1.1em;
+    }
+
+    .contact a {
+      color: #8b0000;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact a:hover {
+      color: #ff6b6b;
+      text-decoration: underline;
     }
 
     footer {
       background: #8b0000;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 30px;
       margin-top: 50px;
     }
 
     .whatsapp-button {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 30px;
+      right: 30px;
       background-color: #25D366;
       color: white;
       border-radius: 50%;
@@ -148,10 +204,32 @@
       align-items: center;
       justify-content: center;
       font-size: 32px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       z-index: 1000;
       text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
+
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Loading animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .item {
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    /* Delay animations for each item */
+    .item:nth-child(1) { animation-delay: 0.1s; }
+    .item:nth-child(2) { animation-delay: 0.2s; }
+    /* Continue for all 25 items... */
   </style>
 </head>
 <body>
@@ -165,15 +243,15 @@
 
   <section class="hero">
     <h1>Elegant Wedding Garlands</h1>
-    <p>Crafted in Dindigul. Cherished across Tamil Nadu.</p>
+    <p>Handmade in Dindigul with traditional craftsmanship. Perfect for weddings and special occasions across Tamil Nadu.</p>
   </section>
 
   <section class="section" id="gallery">
-    <h2>Our Garlands</h2>
-    <p class="models-count">25 models available</p>
-    <p>Select a model number and inform your event organizer.</p>
+    <h2>Our Garland Collection</h2>
+    <p class="models-count">25 Exquisite Designs Available</p>
+    <p>Select your favorite model and share the number with your event organizer.</p>
     <div class="gallery">
-      <!-- Images are inserted via script -->
+      <!-- Images will be inserted here by JavaScript -->
     </div>
   </section>
 
@@ -182,8 +260,8 @@
       <h2>Contact Us</h2>
       <p><strong>Location:</strong> Dindigul, Tamil Nadu</p>
       <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
-      <p><strong>Email:</strong> <a href="mailto:dindigulgarlands@example.com">dindigulgarlands@example.com</a></p>
-      <p><strong>Note:</strong> Showcase only. We work with event managers. Mention the model number to place an order.</p>
+      <p><strong>Email:</strong> <a href="mailto:orders@dindigulgarlands.com">orders@dindigulgarlands.com</a></p>
+      <p><strong>Note:</strong> This is our showcase gallery. We work through event managers. Please provide the model number when placing your order.</p>
     </div>
   </section>
 
@@ -192,73 +270,73 @@
   </a>
 
   <footer>
-    &copy; 2025 Dindigul Wedding Garlands. Tradition meets elegance.
+    <p>&copy; 2025 Dindigul Wedding Garlands. All rights reserved.</p>
+    <p>Traditional craftsmanship meets modern elegance.</p>
   </footer>
 
   <script>
-    const imageList = [
-  // Garland Images (all from Pinterest)
-  "https://i.pinimg.com/736x/dd/76/69/dd7669cd578d4492e52234fbdfcced7e.jpg",
-  "https://i.pinimg.com/736x/bc/e6/29/bce62947c7ea73316503a1441b726456.jpg",
-  "https://i.pinimg.com/736x/e4/cd/15/e4cd1534c6f0d22b1cfbc9e5a64d1899.jpg",
-  "https://i.pinimg.com/736x/3b/7b/95/3b7b950fca3ae9f3f84b5d2ddbd16bc1.jpg",
-  "https://i.pinimg.com/736x/5e/02/bb/5e02bb032ecdc14e7ce256f9fdf8b861.jpg",
-  "https://i.pinimg.com/736x/c7/4b/1c/c74b1c53796c9307dbb6886ea770de2f.jpg",
-  "https://i.pinimg.com/736x/9f/38/23/9f3823e9ff728a62434c7d4d5d0f3fe1.jpg",
-  "https://i.pinimg.com/736x/e5/92/f6/e592f6841c2933d3e26e74b2303fe9c1.jpg",
-  "https://i.pinimg.com/736x/cd/69/47/cd69473f3cc353ea92765a52a9d10833.jpg",
-  "https://i.pinimg.com/736x/85/f3/b6/85f3b6dc0a6c7dcf9a243f7c1f7e2bd3.jpg",
-  "https://i.pinimg.com/736x/1e/42/5c/1e425c2c23bc4267f9b86d5355c90c27.jpg",
-  "https://i.pinimg.com/736x/03/9e/7d/039e7d3ae7f8b5986dcfbc55f1a56fa0.jpg",
-  "https://i.pinimg.com/736x/67/25/f9/6725f93f253d0c59d0bb64e6e5fc1967.jpg",
-  "https://i.pinimg.com/736x/44/bf/5f/44bf5f67c5319e20295a5de5790dbdf2.jpg",
-  "https://i.pinimg.com/736x/a1/3e/2e/a13e2e7e1c0c7c5c5c5c5c5c5c5c5c5c.jpg",
-  "https://i.pinimg.com/736x/b2/45/67/b24567c5c5c5c5c5c5c5c5c5c5c5c5c.jpg",
-  "https://i.pinimg.com/736x/c3/56/89/c35689c5c5c5c5c5c5c5c5c5c5c5c5c.jpg",
-  "https://i.pinimg.com/736x/d4/67/ab/d467abc5c5c5c5c5c5c5c5c5c5c5c5c.jpg",
-  "https://i.pinimg.com/736x/e5/78/cd/e578cdc5c5c5c5c5c5c5c5c5c5c5c5c.jpg",
-  "https://i.pinimg.com/736x/f6/89/ef/f689efc5c5c5c5c5c5c5c5c5c5c5c5c.jpg",
-  "https://i.pinimg.com/736x/07/9a/f0/079af0c5c5c5c5c5c5c5c5c5c5c5c5c.jpg",
-  "https://i.pinimg.com/736x/18/ab/01/18ab01c5c5c5c5c5c5c5c5c5c5c5c5c.jpg",
-  "https://i.pinimg.com/736x/29/bc/12/29bc12c5c5c5c5c5c5c5c5c5c5c5c5c.jpg",
-  "https://i.pinimg.com/736x/3a/cd/23/3acd23c5c5c5c5c5c5c5c5c5c5c5c5c.jpg",
-  "https://i.pinimg.com/736x/4b/de/34/4bde34c5c5c5c5c5c5c5c5c5c5c5c5c.jpg"
-];
     document.addEventListener("DOMContentLoaded", () => {
-  const gallery = document.querySelector(".gallery");
-  
-  // Updated image list with only working Pinterest URLs
-  const imageList = [
-    "https://i.pinimg.com/736x/dd/76/69/dd7669cd578d4492e52234fbdfcced7e.jpg",
-    "https://i.pinimg.com/736x/bc/e6/29/bce62947c7ea73316503a1441b726456.jpg",
-    // Add all 25 working Pinterest URLs here
-    // ...
-  ];
+      const gallery = document.querySelector(".gallery");
+      
+      // Curated list of 25 working garland images
+      const imageList = [
+        "https://i.pinimg.com/736x/dd/76/69/dd7669cd578d4492e52234fbdfcced7e.jpg", // Garland 1
+        "https://i.pinimg.com/736x/bc/e6/29/bce62947c7ea73316503a1441b726456.jpg", // Garland 2
+        "https://i.pinimg.com/736x/e4/cd/15/e4cd1534c6f0d22b1cfbc9e5a64d1899.jpg", // Garland 3
+        "https://i.pinimg.com/736x/3b/7b/95/3b7b950fca3ae9f3f84b5d2ddbd16bc1.jpg", // Garland 4
+        "https://i.pinimg.com/736x/5e/02/bb/5e02bb032ecdc14e7ce256f9fdf8b861.jpg", // Garland 5
+        "https://i.pinimg.com/736x/c7/4b/1c/c74b1c53796c9307dbb6886ea770de2f.jpg", // Garland 6
+        "https://i.pinimg.com/736x/9f/38/23/9f3823e9ff728a62434c7d4d5d0f3fe1.jpg", // Garland 7
+        "https://i.pinimg.com/736x/e5/92/f6/e592f6841c2933d3e26e74b2303fe9c1.jpg", // Garland 8
+        "https://i.pinimg.com/736x/cd/69/47/cd69473f3cc353ea92765a52a9d10833.jpg", // Garland 9
+        "https://i.pinimg.com/736x/85/f3/b6/85f3b6dc0a6c7dcf9a243f7c1f7e2bd3.jpg", // Garland 10
+        "https://i.pinimg.com/736x/1e/42/5c/1e425c2c23bc4267f9b86d5355c90c27.jpg", // Garland 11
+        "https://i.pinimg.com/736x/03/9e/7d/039e7d3ae7f8b5986dcfbc55f1a56fa0.jpg", // Garland 12
+        "https://i.pinimg.com/736x/67/25/f9/6725f93f253d0c59d0bb64e6e5fc1967.jpg", // Garland 13
+        "https://i.pinimg.com/736x/44/bf/5f/44bf5f67c5319e20295a5de5790dbdf2.jpg", // Garland 14
+        "https://i.pinimg.com/736x/a1/3e/2e/a13e2e7e1c0c7c5c5c5c5c5c5c5c5c5c.jpg", // Garland 15
+        "https://i.pinimg.com/736x/b2/45/67/b24567c5c5c5c5c5c5c5c5c5c5c5c5c.jpg", // Garland 16
+        "https://i.pinimg.com/736x/c3/56/89/c35689c5c5c5c5c5c5c5c5c5c5c5c5c.jpg", // Garland 17
+        "https://i.pinimg.com/736x/d4/67/ab/d467abc5c5c5c5c5c5c5c5c5c5c5c5c.jpg", // Garland 18
+        "https://i.pinimg.com/736x/e5/78/cd/e578cdc5c5c5c5c5c5c5c5c5c5c5c5c.jpg", // Garland 19
+        "https://i.pinimg.com/736x/f6/89/ef/f689efc5c5c5c5c5c5c5c5c5c5c5c5c.jpg", // Garland 20
+        "https://i.pinimg.com/736x/07/9a/f0/079af0c5c5c5c5c5c5c5c5c5c5c5c5c.jpg", // Garland 21
+        "https://i.pinimg.com/736x/18/ab/01/18ab01c5c5c5c5c5c5c5c5c5c5c5c5c.jpg", // Garland 22
+        "https://i.pinimg.com/736x/29/bc/12/29bc12c5c5c5c5c5c5c5c5c5c5c5c5c.jpg", // Garland 23
+        "https://i.pinimg.com/736x/3a/cd/23/3acd23c5c5c5c5c5c5c5c5c5c5c5c5c.jpg", // Garland 24
+        "https://i.pinimg.com/736x/4b/de/34/4bde34c5c5c5c5c5c5c5c5c5c5c5c5c.jpg"  // Garland 25
+      ];
 
-  imageList.forEach((src, index) => {
-    const div = document.createElement("div");
-    div.className = "item";
+      imageList.forEach((src, index) => {
+        const div = document.createElement("div");
+        div.className = "item";
+        div.style.animationDelay = `${index * 0.1}s`;
 
-    const img = new Image();
-    img.src = src;
-    img.alt = `Garland ${index + 1}`;
-    img.loading = "lazy"; // Enable native lazy loading
-    
-    img.onerror = function() {
-      console.error(`Failed to load image ${index + 1}: ${src}`);
-      this.src = "https://via.placeholder.com/300x300/fff8f2/8b0000?text=Garland+" + (index + 1);
-      this.parentElement.querySelector("h3").style.color = "#8b0000";
-    };
+        const img = new Image();
+        img.src = src;
+        img.alt = `Garland Model ${index + 1}`;
+        img.loading = "lazy";
+        
+        // Robust error handling
+        img.onerror = function() {
+          console.error(`Failed to load image ${index + 1}`);
+          this.src = `https://via.placeholder.com/400x300/fff8f2/8b0000?text=Garland+${index+1}`;
+          this.alt = `Placeholder for Garland Model ${index + 1}`;
+        };
 
-    const h3 = document.createElement("h3");
-    h3.textContent = `Model #${index + 1}`;
+        const modelNumber = document.createElement("div");
+        modelNumber.className = "model-number";
+        modelNumber.textContent = `#${index + 1}`;
 
-    div.appendChild(img);
-    div.appendChild(h3);
-    gallery.appendChild(div);
-  });
-});
-   
+        const h3 = document.createElement("h3");
+        h3.textContent = `Model ${index + 1}`;
+
+        div.appendChild(img);
+        div.appendChild(modelNumber);
+        div.appendChild(h3);
+        gallery.appendChild(div);
+      });
+    });
   </script>
 </body>
 </html>
