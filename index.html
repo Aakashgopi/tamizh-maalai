@@ -3,9 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dindigul Wedding Garlands</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Handcrafted wedding garlands from Dindigul, Tamil Nadu. Traditional floral designs for your special day.">
+  <meta name="keywords" content="wedding garlands, Dindigul garlands, Tamil Nadu wedding, floral garlands, jaimala, varmala">
+  <title>Dindigul Wedding Garlands | Handcrafted Floral Designs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    :root {
+      --primary-color: #8b0000;
+      --secondary-color: #b71c1c;
+      --accent-color: #25D366;
+      --light-bg: #fff8f2;
+      --text-color: #333;
+      --white: #ffffff;
+      --shadow: 0 4px 6px rgba(0,0,0,0.1);
+      --transition: all 0.3s ease;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -14,143 +28,308 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: #fff8f2;
-      color: #333;
+      background: var(--light-bg);
+      color: var(--text-color);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     header {
-      background: #8b0000;
-      color: white;
-      padding: 1.5em 2em;
+      background: var(--primary-color);
+      color: var(--white);
+      padding: 1.5rem 2rem;
       text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     header h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.2em;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
     }
 
     nav a {
-      margin: 0 20px;
-      color: #fff;
+      color: var(--white);
       font-weight: 500;
       text-decoration: none;
-      font-size: 1.1em;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
     }
 
     .hero {
-      background: url('https://images.unsplash.com/photo-1621570079786-7b0fbcdb79f2') no-repeat center center/cover;
-      color: #fff;
-      padding: 100px 20px;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url('https://images.unsplash.com/photo-1621570079786-7b0fbcdb79f2') no-repeat center center/cover;
+      color: var(--white);
+      padding: 8rem 1rem;
       text-align: center;
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .hero h1 {
-      font-size: 3em;
+      font-size: 3rem;
       text-shadow: 1px 1px 3px #000;
+      margin-bottom: 1rem;
+      font-weight: 600;
     }
 
     .hero p {
-      font-size: 1.2em;
-      margin-top: 10px;
+      font-size: 1.4rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 2px #000;
     }
 
     .section {
-      padding: 60px 20px;
+      padding: 5rem 1rem;
       text-align: center;
     }
 
     .section h2 {
-      font-size: 2.2em;
-      margin-bottom: 20px;
-      color: #8b0000;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--secondary-color);
     }
 
     .models-count {
-      font-size: 1em;
+      font-size: 1.1rem;
       color: #666;
-      margin-bottom: 40px;
+      margin-bottom: 2rem;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: auto;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 1rem;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     .item {
-      background: white;
+      background: var(--white);
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: var(--shadow);
       overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: var(--transition);
+      position: relative;
     }
 
     .item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
 
     .item img {
       width: 100%;
-      height: auto;
-      max-height: 280px;
+      height: 300px;
       object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .item:hover img {
+      transform: scale(1.05);
     }
 
     .item h3 {
-      padding: 15px;
-      color: #b71c1c;
-      font-size: 1.2em;
+      padding: 1.2rem;
+      color: var(--secondary-color);
+      font-size: 1.2rem;
+      font-weight: 500;
     }
 
     .contact {
-      max-width: 700px;
-      margin: auto;
+      max-width: 800px;
+      margin: 0 auto;
       background: #fff3f0;
-      padding: 30px;
+      padding: 3rem;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: var(--shadow);
     }
 
     .contact h2 {
-      color: #c62828;
+      color: var(--primary-color);
+      margin-bottom: 2rem;
     }
 
     .contact p {
-      margin: 10px 0;
-      font-size: 1.1em;
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
+
+    .contact a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .contact a:hover {
+      color: var(--secondary-color);
+      text-decoration: underline;
     }
 
     footer {
-      background: #8b0000;
-      color: white;
+      background: var(--primary-color);
+      color: var(--white);
       text-align: center;
-      padding: 20px;
-      margin-top: 50px;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .social-links a {
+      color: var(--white);
+      font-size: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      transform: translateY(-3px);
+      opacity: 0.8;
     }
 
     .whatsapp-button {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: var(--accent-color);
+      color: var(--white);
       border-radius: 50%;
       width: 60px;
       height: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 32px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      font-size: 1.8rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       z-index: 1000;
       text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 7rem;
+      right: 2rem;
+      background-color: var(--primary-color);
+      color: var(--white);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: var(--shadow);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background-color: var(--secondary-color);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+      
+      .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+      
+      .contact {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 1rem;
+      }
+      
+      nav a {
+        font-size: 1rem;
+        padding: 0.3rem 0.8rem;
+      }
+      
+      .hero {
+        padding: 6rem 1rem;
+      }
+      
+      .section {
+        padding: 3rem 1rem;
+      }
+      
+      .section h2 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
@@ -158,20 +337,20 @@
   <header>
     <h1>Dindigul Handcrafted Garlands</h1>
     <nav>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
+      <a href="#gallery"><i class="fas fa-images"></i> Gallery</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
     </nav>
   </header>
 
   <section class="hero">
     <h1>Elegant Wedding Garlands</h1>
-    <p>Crafted in Dindigul. Cherished across Tamil Nadu.</p>
+    <p>Handcrafted in Dindigul. Cherished across Tamil Nadu and beyond.</p>
   </section>
 
   <section class="section" id="gallery">
-    <h2>Our Garlands</h2>
-    <p class="models-count">25 models available</p>
-    <p>Select a model number and inform your event organizer.</p>
+    <h2>Our Garlands Collection</h2>
+    <p class="models-count">25+ Exquisite Designs Available</p>
+    <p>Select your favorite model and inform your event organizer.</p>
     <div class="gallery">
       <!-- Images are inserted via script -->
     </div>
@@ -179,61 +358,153 @@
 
   <section class="section" id="contact">
     <div class="contact">
-      <h2>Contact Us</h2>
-      <p><strong>Location:</strong> Dindigul, Tamil Nadu</p>
-      <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
-      <p><strong>Email:</strong> <a href="mailto:dindigulgarlands@example.com">dindigulgarlands@example.com</a></p>
-      <p><strong>Note:</strong> Showcase only. We work with event managers. Mention the model number to place an order.</p>
+      <h2>Get In Touch</h2>
+      <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Dindigul, Tamil Nadu</p>
+      <p><i class="fas fa-phone"></i> <strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
+      <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:dindigulgarlands@example.com">dindigulgarlands@example.com</a></p>
+      <p><i class="fas fa-info-circle"></i> <strong>Note:</strong> This is a showcase only. We work with event managers. Please mention the model number when placing your order.</p>
     </div>
   </section>
 
-  <a class="whatsapp-button" href="https://wa.me/919876543210" target="_blank" title="Chat with us on WhatsApp">
-    &#128222;
+  <footer>
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/919876543210" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p>&copy; 2025 Dindigul Wedding Garlands. All Rights Reserved.</p>
+      <p>Tradition meets elegance in every petal.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/919876543210" target="_blank" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
   </a>
 
-  <footer>
-    &copy; 2025 Dindigul Wedding Garlands. Tradition meets elegance.
-  </footer>
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const gallery = document.querySelector(".gallery");
-      const imageList = [
-        "https://i.pinimg.com/736x/dd/76/69/dd7669cd578d4492e52234fbdfcced7e.jpg",
-        "https://th.bing.com/th/id/OIP.CmKh-OqfzCuwuF4VJ1GI0QHaNK?cb=iwp2&pid=ImgDet&w=178&h=315&c=7&dpr=1.1",
-        "https://th.bing.com/th/id/R.6967754ace404002cae7e2739ddb2fbe?rik=H%2bS4glW47ufAow&riu=http%3a%2f%2fwww.flowernpetals.com%2fwp-content%2fuploads%2f2021%2f07%2fTrendy-Design-Beautiful-Wedding-Garlands-Purple-Orchid-Garland-Jaimala-Varmala-Blue-Purple-Orchid-Garlands-Rose-Petals-Garlands-Jaimala-Varmala-2.jpg&ehk=BlU6o3fSJbtBzUIEzSMYtldaVNDhq2TdyHL7fSt3u%2bQ%3d&risl=&pid=ImgRaw&r=0",
-        "https://th.bing.com/th/id/OIP.HuLDtTNM4RAKhyVmP6-FRwAAAA?cb=iwp2&w=289&h=500&rs=1&pid=ImgDetMain",
-        "https://th.bing.com/th/id/OIP.BLcm4kzuv_XMgKZrzVrxogHaIy?cb=iwp2&pid=ImgDet&w=178&h=210&c=7&dpr=1.1",
-        "https://th.bing.com/th/id/OIP.WIbSE9kbIsGWQjfEpnBlTgHaJ4?cb=iwp2&pid=ImgDet&w=178&h=237&c=7&dpr=1.1",
-        "https://th.bing.com/th/id/OIP.HfEZfIl408ZifBHx-cxZkQAAAA?cb=iwp2&pid=ImgDet&w=178&h=219&c=7&dpr=1.1",
-        "https://th.bing.com/th/id/OIP.ND9a7ux6F3G6kEQrIdQc5AAAAA?cb=iwp2&pid=ImgDet&w=154&h=350&c=7&dpr=1.1",
-        "https://th.bing.com/th/id/OIP.0yc6ntDY89tv6ZiDtDHNJwHaJ9?cb=iwp2&pid=ImgDet&w=178&h=238&c=7&dpr=1.1",
-        "https://th.bing.com/th/id/OIP.esnu1zMQz7SR7CgCr-hdPAAAAA?cb=iwp2&pid=ImgDet&w=178&h=295&c=7&dpr=1.1",
-        "https://th.bing.com/th/id/OIP.QBfew2kIaaSwfgnIBKQj4wAAAA?cb=iwp2&pid=ImgDet&w=178&h=347&c=7&dpr=1.1",
-        "https://th.bing.com/th/id/OIP.XzyCpli49s40iMm1M1cH4QAAAA?cb=iwp2&pid=ImgDet&w=170&h=226&c=7&dpr=1.1",
-        "https://i.pinimg.com/originals/44/bf/5f/44bf5f67c5319e20295a5de5790dbdf2.jpg",
-        "https://i.pinimg.com/736x/bc/e6/29/bce62947c7ea73316503a1441b726456.jpg",
-        "https://i.pinimg.com/originals/e4/cd/15/e4cd1534c6f0d22b1cfbc9e5a64d1899.jpg",
-        "https://i.pinimg.com/736x/3b/7b/95/3b7b950fca3ae9f3f84b5d2ddbd16bc1.jpg",
-        "https://i.pinimg.com/originals/5e/02/bb/5e02bb032ecdc14e7ce256f9fdf8b861.jpg",
-        "https://i.pinimg.com/736x/c7/4b/1c/c74b1c53796c9307dbb6886ea770de2f.jpg",
-        "https://i.pinimg.com/736x/9f/38/23/9f3823e9ff728a62434c7d4d5d0f3fe1.jpg",
-        "https://i.pinimg.com/736x/e5/92/f6/e592f6841c2933d3e26e74b2303fe9c1.jpg",
-        "https://i.pinimg.com/736x/cd/69/47/cd69473f3cc353ea92765a52a9d10833.jpg",
-        "https://i.pinimg.com/736x/85/f3/b6/85f3b6dc0a6c7dcf9a243f7c1f7e2bd3.jpg",
-        "https://i.pinimg.com/736x/1e/42/5c/1e425c2c23bc4267f9b86d5355c90c27.jpg",
-        "https://i.pinimg.com/736x/03/9e/7d/039e7d3ae7f8b5986dcfbc55f1a56fa0.jpg",
-        "https://i.pinimg.com/736x/67/25/f9/6725f93f253d0c59d0bb64e6e5fc1967.jpg"
-
+      const backToTop = document.querySelector(".back-to-top");
+      
+      // Garland images data
+      const garlands = [
+        {
+          src: "https://i.pinimg.com/736x/dd/76/69/dd7669cd578d4492e52234fbdfcced7e.jpg",
+          alt: "Traditional rose and jasmine garland"
+        },
+        {
+          src: "https://th.bing.com/th/id/OIP.CmKh-OqfzCuwuF4VJ1GI0QHaNK?cb=iwp2&pid=ImgDet&w=178&h=315&c=7&dpr=1.1",
+          alt: "White and gold wedding garland"
+        },
+        {
+          src: "https://th.bing.com/th/id/R.6967754ace404002cae7e2739ddb2fbe?rik=H%2bS4glW47ufAow&riu=http%3a%2f%2fwww.flowernpetals.com%2fwp-content%2fuploads%2f2021%2f07%2fTrendy-Design-Beautiful-Wedding-Garlands-Purple-Orchid-Garland-Jaimala-Varmala-Blue-Purple-Orchid-Garlands-Rose-Petals-Garlands-Jaimala-Varmala-2.jpg&ehk=BlU6o3fSJbtBzUIEzSMYtldaVNDhq2TdyHL7fSt3u%2bQ%3d&risl=&pid=ImgRaw&r=0",
+          alt: "Purple orchid wedding garland"
+        },
+        {
+          src: "https://th.bing.com/th/id/OIP.HuLDtTNM4RAKhyVmP6-FRwAAAA?cb=iwp2&w=289&h=500&rs=1&pid=ImgDetMain",
+          alt: "Red and gold bridal garland"
+        },
+        {
+          src: "https://th.bing.com/th/id/OIP.BLcm4kzuv_XMgKZrzVrxogHaIy?cb=iwp2&pid=ImgDet&w=178&h=210&c=7&dpr=1.1",
+          alt: "Classic rose garland with pearls"
+        },
+        {
+          src: "https://th.bing.com/th/id/OIP.WIbSE9kbIsGWQjfEpnBlTgHaJ4?cb=iwp2&pid=ImgDet&w=178&h=237&c=7&dpr=1.1",
+          alt: "White flower wedding garland"
+        },
+        {
+          src: "https://th.bing.com/th/id/OIP.HfEZfIl408ZifBHx-cxZkQAAAA?cb=iwp2&pid=ImgDet&w=178&h=219&c=7&dpr=1.1",
+          alt: "Traditional South Indian garland"
+        },
+        {
+          src: "https://th.bing.com/th/id/OIP.ND9a7ux6F3G6kEQrIdQc5AAAAA?cb=iwp2&pid=ImgDet&w=154&h=350&c=7&dpr=1.1",
+          alt: "Pink and white floral garland"
+        },
+        {
+          src: "https://th.bing.com/th/id/OIP.0yc6ntDY89tv6ZiDtDHNJwHaJ9?cb=iwp2&pid=ImgDet&w=178&h=238&c=7&dpr=1.1",
+          alt: "Orchid and rose combination garland"
+        },
+        {
+          src: "https://th.bing.com/th/id/OIP.esnu1zMQz7SR7CgCr-hdPAAAAA?cb=iwp2&pid=ImgDet&w=178&h=295&c=7&dpr=1.1",
+          alt: "Golden marigold wedding garland"
+        },
+        {
+          src: "https://th.bing.com/th/id/OIP.QBfew2kIaaSwfgnIBKQj4wAAAA?cb=iwp2&pid=ImgDet&w=178&h=347&c=7&dpr=1.1",
+          alt: "Royal red and gold garland"
+        },
+        {
+          src: "https://th.bing.com/th/id/OIP.XzyCpli49s40iMm1M1cH4QAAAA?cb=iwp2&pid=ImgDet&w=170&h=226&c=7&dpr=1.1",
+          alt: "Elegant white floral garland"
+        },
+        {
+          src: "https://i.pinimg.com/originals/44/bf/5f/44bf5f67c5319e20295a5de5790dbdf2.jpg",
+          alt: "Traditional jasmine bridal garland"
+        },
+        {
+          src: "https://i.pinimg.com/736x/bc/e6/29/bce62947c7ea73316503a1441b726456.jpg",
+          alt: "Colorful wedding garland design"
+        },
+        {
+          src: "https://i.pinimg.com/originals/e4/cd/15/e4cd1534c6f0d22b1cfbc9e5a64d1899.jpg",
+          alt: "Rose and orchid combination garland"
+        },
+        {
+          src: "https://i.pinimg.com/736x/3b/7b/95/3b7b950fca3ae9f3f84b5d2ddbd16bc1.jpg",
+          alt: "Classic red rose wedding garland"
+        },
+        {
+          src: "https://i.pinimg.com/originals/5e/02/bb/5e02bb032ecdc14e7ce256f9fdf8b861.jpg",
+          alt: "Traditional South Indian bridal garland"
+        },
+        {
+          src: "https://i.pinimg.com/736x/c7/4b/1c/c74b1c53796c9307dbb6886ea770de2f.jpg",
+          alt: "White and gold elegant garland"
+        },
+        {
+          src: "https://i.pinimg.com/736x/9f/38/23/9f3823e9ff728a62434c7d4d5d0f3fe1.jpg",
+          alt: "Pink rose wedding garland"
+        },
+        {
+          src: "https://i.pinimg.com/736x/e5/92/f6/e592f6841c2933d3e26e74b2303fe9c1.jpg",
+          alt: "Classic white floral garland"
+        },
+        {
+          src: "https://i.pinimg.com/736x/cd/69/47/cd69473f3cc353ea92765a52a9d10833.jpg",
+          alt: "Traditional marigold garland"
+        },
+        {
+          src: "https://i.pinimg.com/736x/85/f3/b6/85f3b6dc0a6c7dcf9a243f7c1f7e2bd3.jpg",
+          alt: "Elegant orchid wedding garland"
+        },
+        {
+          src: "https://i.pinimg.com/736x/1e/42/5c/1e425c2c23bc4267f9b86d5355c90c27.jpg",
+          alt: "Royal wedding garland design"
+        },
+        {
+          src: "https://i.pinimg.com/736x/03/9e/7d/039e7d3ae7f8b5986dcfbc55f1a56fa0.jpg",
+          alt: "Traditional South Indian floral garland"
+        },
+        {
+          src: "https://i.pinimg.com/736x/67/25/f9/6725f93f253d0c59d0bb64e6e5fc1967.jpg",
+          alt: "Classic bridal wedding garland"
+        }
       ];
 
-      imageList.forEach((src, index) => {
+      // Create gallery items
+      garlands.forEach((garland, index) => {
         const div = document.createElement("div");
         div.className = "item";
+        div.setAttribute("data-model", index + 1);
 
         const img = document.createElement("img");
-        img.src = src;
-        img.alt = `Garland ${index + 1}`;
+        img.src = garland.src;
+        img.alt = garland.alt;
+        img.loading = "lazy";
 
         const h3 = document.createElement("h3");
         h3.textContent = `Model #${index + 1}`;
@@ -241,6 +512,25 @@
         div.appendChild(img);
         div.appendChild(h3);
         gallery.appendChild(div);
+      });
+
+      // Back to top button functionality
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          backToTop.classList.add("active");
+        } else {
+          backToTop.classList.remove("active");
+        }
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+          });
+        });
       });
     });
   </script>
