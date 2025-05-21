@@ -3,21 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Handcrafted wedding garlands from Dindigul, Tamil Nadu. Traditional floral designs for your special day.">
-  <meta name="keywords" content="wedding garlands, Dindigul garlands, Tamil Nadu wedding, floral garlands, jaimala, varmala">
-  <title>Dindigul Wedding Garlands | Handcrafted Floral Designs</title>
+  <meta name="description" content="Premium handcrafted wedding garlands from Dindigul, Tamil Nadu. Traditional floral designs for your special day with 25+ unique models.">
+  <meta name="keywords" content="wedding garlands, Dindigul garlands, Tamil Nadu wedding, floral garlands, jaimala, varmala, bridal garlands">
+  <meta name="author" content="Dindigul Wedding Garlands">
+  <title>Dindigul Wedding Garlands | Premium Handcrafted Floral Designs</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preload" href="https://images.unsplash.com/photo-1621570079786-7b0fbcdb79f2" as="image">
   <style>
     :root {
       --primary-color: #8b0000;
+      --primary-dark: #5a0000;
       --secondary-color: #b71c1c;
       --accent-color: #25D366;
+      --accent-dark: #128C7E;
       --light-bg: #fff8f2;
+      --light-accent: #fff3f0;
       --text-color: #333;
+      --text-light: #666;
       --white: #ffffff;
       --shadow: 0 4px 6px rgba(0,0,0,0.1);
+      --shadow-hover: 0 8px 15px rgba(0,0,0,0.15);
       --transition: all 0.3s ease;
+      --border-radius: 10px;
     }
 
     * {
@@ -32,6 +40,22 @@
       color: var(--text-color);
       line-height: 1.6;
       overflow-x: hidden;
+    }
+
+    /* Skip to content link for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary-color);
+      color: white;
+      padding: 8px;
+      z-index: 100;
+      transition: top 0.3s;
+    }
+
+    .skip-link:focus {
+      top: 0;
     }
 
     header {
@@ -49,6 +73,7 @@
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
       font-weight: 600;
+      letter-spacing: 0.5px;
     }
 
     nav {
@@ -65,16 +90,20 @@
       text-decoration: none;
       font-size: 1.1rem;
       padding: 0.5rem 1rem;
-      border-radius: 4px;
+      border-radius: var(--border-radius);
       transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
-    nav a:hover {
+    nav a:hover, nav a:focus {
       background: rgba(255, 255, 255, 0.2);
+      outline: none;
     }
 
     .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
                   url('https://images.unsplash.com/photo-1621570079786-7b0fbcdb79f2') no-repeat center center/cover;
       color: var(--white);
       padding: 8rem 1rem;
@@ -88,21 +117,25 @@
 
     .hero h1 {
       font-size: 3rem;
-      text-shadow: 1px 1px 3px #000;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
       margin-bottom: 1rem;
       font-weight: 600;
+      animation: fadeInUp 1s ease;
     }
 
     .hero p {
       font-size: 1.4rem;
       max-width: 800px;
       margin: 0 auto;
-      text-shadow: 1px 1px 2px #000;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+      animation: fadeInUp 1s ease 0.2s forwards;
+      opacity: 0;
     }
 
     .section {
       padding: 5rem 1rem;
       text-align: center;
+      scroll-margin-top: 100px;
     }
 
     .section h2 {
@@ -127,7 +160,7 @@
 
     .models-count {
       font-size: 1.1rem;
-      color: #666;
+      color: var(--text-light);
       margin-bottom: 2rem;
     }
 
@@ -142,7 +175,7 @@
 
     .item {
       background: var(--white);
-      border-radius: 10px;
+      border-radius: var(--border-radius);
       box-shadow: var(--shadow);
       overflow: hidden;
       transition: var(--transition);
@@ -151,7 +184,7 @@
 
     .item:hover {
       transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      box-shadow: var(--shadow-hover);
     }
 
     .item img {
@@ -172,12 +205,27 @@
       font-weight: 500;
     }
 
+    .item .model-number {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(139, 0, 0, 0.8);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+    }
+
     .contact {
       max-width: 800px;
       margin: 0 auto;
-      background: #fff3f0;
+      background: var(--light-accent);
       padding: 3rem;
-      border-radius: 10px;
+      border-radius: var(--border-radius);
       box-shadow: var(--shadow);
     }
 
@@ -186,9 +234,23 @@
       margin-bottom: 2rem;
     }
 
-    .contact p {
-      margin: 1rem 0;
-      font-size: 1.1rem;
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .contact-icon {
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      min-width: 25px;
     }
 
     .contact a {
@@ -198,13 +260,14 @@
       transition: var(--transition);
     }
 
-    .contact a:hover {
+    .contact a:hover, .contact a:focus {
       color: var(--secondary-color);
       text-decoration: underline;
+      outline: none;
     }
 
     footer {
-      background: var(--primary-color);
+      background: var(--primary-dark);
       color: var(--white);
       text-align: center;
       padding: 2rem;
@@ -227,11 +290,18 @@
       color: var(--white);
       font-size: 1.5rem;
       transition: var(--transition);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .social-links a:hover {
+    .social-links a:hover, .social-links a:focus {
       transform: translateY(-3px);
-      opacity: 0.8;
+      background: rgba(255, 255, 255, 0.1);
+      outline: none;
     }
 
     .whatsapp-button {
@@ -247,15 +317,16 @@
       align-items: center;
       justify-content: center;
       font-size: 1.8rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: var(--shadow-hover);
       z-index: 1000;
       text-decoration: none;
       transition: var(--transition);
     }
 
-    .whatsapp-button:hover {
+    .whatsapp-button:hover, .whatsapp-button:focus {
       transform: scale(1.1);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      background-color: var(--accent-dark);
+      outline: none;
     }
 
     .back-to-top {
@@ -276,6 +347,7 @@
       opacity: 0;
       visibility: hidden;
       transition: var(--transition);
+      text-decoration: none;
     }
 
     .back-to-top.active {
@@ -283,13 +355,57 @@
       visibility: visible;
     }
 
-    .back-to-top:hover {
+    .back-to-top:hover, .back-to-top:focus {
       background-color: var(--secondary-color);
+      outline: none;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Loading animation for images */
+    .item img {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+    }
+
+    @keyframes loading {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero p {
+        font-size: 1.2rem;
+      }
     }
 
     @media (max-width: 768px) {
       header h1 {
         font-size: 2rem;
+      }
+      
+      .hero {
+        padding: 6rem 1rem;
       }
       
       .hero h1 {
@@ -309,7 +425,7 @@
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 576px) {
       header {
         padding: 1rem;
       }
@@ -319,10 +435,6 @@
         padding: 0.3rem 0.8rem;
       }
       
-      .hero {
-        padding: 6rem 1rem;
-      }
-      
       .section {
         padding: 3rem 1rem;
       }
@@ -330,60 +442,94 @@
       .section h2 {
         font-size: 1.8rem;
       }
+      
+      .item .model-number {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+      }
+      
+      .whatsapp-button, .back-to-top {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+      }
+      
+      .back-to-top {
+        bottom: 6rem;
+      }
     }
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header>
     <h1>Dindigul Handcrafted Garlands</h1>
     <nav>
-      <a href="#gallery"><i class="fas fa-images"></i> Gallery</a>
-      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+      <a href="#gallery"><i class="fas fa-images" aria-hidden="true"></i> Gallery</a>
+      <a href="#contact"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Elegant Wedding Garlands</h1>
-    <p>Handcrafted in Dindigul. Cherished across Tamil Nadu and beyond.</p>
-  </section>
+  <main id="main-content">
+    <section class="hero">
+      <h1>Elegant Wedding Garlands</h1>
+      <p>Handcrafted in Dindigul. Cherished across Tamil Nadu and beyond.</p>
+    </section>
 
-  <section class="section" id="gallery">
-    <h2>Our Garlands Collection</h2>
-    <p class="models-count">25+ Exquisite Designs Available</p>
-    <p>Select your favorite model and inform your event organizer.</p>
-    <div class="gallery">
-      <!-- Images are inserted via script -->
-    </div>
-  </section>
+    <section class="section" id="gallery">
+      <h2>Our Garlands Collection</h2>
+      <p class="models-count">25+ Exquisite Designs Available</p>
+      <p>Select your favorite model and inform your event organizer.</p>
+      <div class="gallery" aria-live="polite">
+        <!-- Images are inserted via script -->
+      </div>
+    </section>
 
-  <section class="section" id="contact">
-    <div class="contact">
-      <h2>Get In Touch</h2>
-      <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Dindigul, Tamil Nadu</p>
-      <p><i class="fas fa-phone"></i> <strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
-      <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:dindigulgarlands@example.com">dindigulgarlands@example.com</a></p>
-      <p><i class="fas fa-info-circle"></i> <strong>Note:</strong> This is a showcase only. We work with event managers. Please mention the model number when placing your order.</p>
-    </div>
-  </section>
+    <section class="section" id="contact">
+      <div class="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+            <span><strong>Location:</strong> Dindigul, Tamil Nadu</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span>
+            <span><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+            <span><strong>Email:</strong> <a href="mailto:dindigulgarlands@example.com">dindigulgarlands@example.com</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon"><i class="fas fa-info-circle" aria-hidden="true"></i></span>
+            <span><strong>Note:</strong> This is a showcase only. We work with event managers. Please mention the model number when placing your order.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="footer-content">
       <div class="social-links">
-        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/919876543210" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
       </div>
       <p>&copy; 2025 Dindigul Wedding Garlands. All Rights Reserved.</p>
       <p>Tradition meets elegance in every petal.</p>
     </div>
   </footer>
 
-  <a class="whatsapp-button" href="https://wa.me/919876543210" target="_blank" aria-label="Chat with us on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+  <a class="whatsapp-button" href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
 
   <a href="#" class="back-to-top" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
   </a>
 
   <script>
@@ -391,107 +537,107 @@
       const gallery = document.querySelector(".gallery");
       const backToTop = document.querySelector(".back-to-top");
       
-      // Garland images data
+      // Garland images data with detailed descriptions
       const garlands = [
         {
           src: "https://i.pinimg.com/736x/dd/76/69/dd7669cd578d4492e52234fbdfcced7e.jpg",
-          alt: "Traditional rose and jasmine garland"
+          alt: "Traditional rose and jasmine garland with gold accents, perfect for South Indian weddings"
         },
         {
           src: "https://th.bing.com/th/id/OIP.CmKh-OqfzCuwuF4VJ1GI0QHaNK?cb=iwp2&pid=ImgDet&w=178&h=315&c=7&dpr=1.1",
-          alt: "White and gold wedding garland"
+          alt: "White and gold wedding garland with intricate floral patterns for a royal look"
         },
         {
           src: "https://th.bing.com/th/id/R.6967754ace404002cae7e2739ddb2fbe?rik=H%2bS4glW47ufAow&riu=http%3a%2f%2fwww.flowernpetals.com%2fwp-content%2fuploads%2f2021%2f07%2fTrendy-Design-Beautiful-Wedding-Garlands-Purple-Orchid-Garland-Jaimala-Varmala-Blue-Purple-Orchid-Garlands-Rose-Petals-Garlands-Jaimala-Varmala-2.jpg&ehk=BlU6o3fSJbtBzUIEzSMYtldaVNDhq2TdyHL7fSt3u%2bQ%3d&risl=&pid=ImgRaw&r=0",
-          alt: "Purple orchid wedding garland"
+          alt: "Purple orchid wedding garland with blue accents for a contemporary bridal look"
         },
         {
           src: "https://th.bing.com/th/id/OIP.HuLDtTNM4RAKhyVmP6-FRwAAAA?cb=iwp2&w=289&h=500&rs=1&pid=ImgDetMain",
-          alt: "Red and gold bridal garland"
+          alt: "Red and gold bridal garland with traditional motifs for Tamil weddings"
         },
         {
           src: "https://th.bing.com/th/id/OIP.BLcm4kzuv_XMgKZrzVrxogHaIy?cb=iwp2&pid=ImgDet&w=178&h=210&c=7&dpr=1.1",
-          alt: "Classic rose garland with pearls"
+          alt: "Classic rose garland with pearls and golden thread work for a luxurious feel"
         },
         {
           src: "https://th.bing.com/th/id/OIP.WIbSE9kbIsGWQjfEpnBlTgHaJ4?cb=iwp2&pid=ImgDet&w=178&h=237&c=7&dpr=1.1",
-          alt: "White flower wedding garland"
+          alt: "White flower wedding garland with delicate patterns for a pure and elegant look"
         },
         {
           src: "https://th.bing.com/th/id/OIP.HfEZfIl408ZifBHx-cxZkQAAAA?cb=iwp2&pid=ImgDet&w=178&h=219&c=7&dpr=1.1",
-          alt: "Traditional South Indian garland"
+          alt: "Traditional South Indian garland with alternating flower patterns in red and white"
         },
         {
           src: "https://th.bing.com/th/id/OIP.ND9a7ux6F3G6kEQrIdQc5AAAAA?cb=iwp2&pid=ImgDet&w=154&h=350&c=7&dpr=1.1",
-          alt: "Pink and white floral garland"
+          alt: "Pink and white floral garland with layered design for a romantic bridal look"
         },
         {
           src: "https://th.bing.com/th/id/OIP.0yc6ntDY89tv6ZiDtDHNJwHaJ9?cb=iwp2&pid=ImgDet&w=178&h=238&c=7&dpr=1.1",
-          alt: "Orchid and rose combination garland"
+          alt: "Orchid and rose combination garland with green accents for a fresh appearance"
         },
         {
           src: "https://th.bing.com/th/id/OIP.esnu1zMQz7SR7CgCr-hdPAAAAA?cb=iwp2&pid=ImgDet&w=178&h=295&c=7&dpr=1.1",
-          alt: "Golden marigold wedding garland"
+          alt: "Golden marigold wedding garland with red accents for traditional ceremonies"
         },
         {
           src: "https://th.bing.com/th/id/OIP.QBfew2kIaaSwfgnIBKQj4wAAAA?cb=iwp2&pid=ImgDet&w=178&h=347&c=7&dpr=1.1",
-          alt: "Royal red and gold garland"
+          alt: "Royal red and gold garland with elaborate floral patterns for grand weddings"
         },
         {
           src: "https://th.bing.com/th/id/OIP.XzyCpli49s40iMm1M1cH4QAAAA?cb=iwp2&pid=ImgDet&w=170&h=226&c=7&dpr=1.1",
-          alt: "Elegant white floral garland"
+          alt: "Elegant white floral garland with silver accents for a sophisticated bridal look"
         },
         {
           src: "https://i.pinimg.com/originals/44/bf/5f/44bf5f67c5319e20295a5de5790dbdf2.jpg",
-          alt: "Traditional jasmine bridal garland"
+          alt: "Traditional jasmine bridal garland with intricate patterns for South Indian weddings"
         },
         {
           src: "https://i.pinimg.com/736x/bc/e6/29/bce62947c7ea73316503a1441b726456.jpg",
-          alt: "Colorful wedding garland design"
+          alt: "Colorful wedding garland design with multiple flower varieties for a vibrant look"
         },
         {
           src: "https://i.pinimg.com/originals/e4/cd/15/e4cd1534c6f0d22b1cfbc9e5a64d1899.jpg",
-          alt: "Rose and orchid combination garland"
+          alt: "Rose and orchid combination garland with pearl accents for a luxurious appearance"
         },
         {
           src: "https://i.pinimg.com/736x/3b/7b/95/3b7b950fca3ae9f3f84b5d2ddbd16bc1.jpg",
-          alt: "Classic red rose wedding garland"
+          alt: "Classic red rose wedding garland with golden thread work for traditional ceremonies"
         },
         {
           src: "https://i.pinimg.com/originals/5e/02/bb/5e02bb032ecdc14e7ce256f9fdf8b861.jpg",
-          alt: "Traditional South Indian bridal garland"
+          alt: "Traditional South Indian bridal garland with alternating flower patterns"
         },
         {
           src: "https://i.pinimg.com/736x/c7/4b/1c/c74b1c53796c9307dbb6886ea770de2f.jpg",
-          alt: "White and gold elegant garland"
+          alt: "White and gold elegant garland with delicate floral patterns for sophisticated weddings"
         },
         {
           src: "https://i.pinimg.com/736x/9f/38/23/9f3823e9ff728a62434c7d4d5d0f3fe1.jpg",
-          alt: "Pink rose wedding garland"
+          alt: "Pink rose wedding garland with pearl accents for a romantic bridal look"
         },
         {
           src: "https://i.pinimg.com/736x/e5/92/f6/e592f6841c2933d3e26e74b2303fe9c1.jpg",
-          alt: "Classic white floral garland"
+          alt: "Classic white floral garland with green accents for a fresh and pure appearance"
         },
         {
           src: "https://i.pinimg.com/736x/cd/69/47/cd69473f3cc353ea92765a52a9d10833.jpg",
-          alt: "Traditional marigold garland"
+          alt: "Traditional marigold garland with red accents for vibrant wedding ceremonies"
         },
         {
           src: "https://i.pinimg.com/736x/85/f3/b6/85f3b6dc0a6c7dcf9a243f7c1f7e2bd3.jpg",
-          alt: "Elegant orchid wedding garland"
+          alt: "Elegant orchid wedding garland with white and purple flowers for contemporary brides"
         },
         {
           src: "https://i.pinimg.com/736x/1e/42/5c/1e425c2c23bc4267f9b86d5355c90c27.jpg",
-          alt: "Royal wedding garland design"
+          alt: "Royal wedding garland design with gold and red flowers for a majestic appearance"
         },
         {
           src: "https://i.pinimg.com/736x/03/9e/7d/039e7d3ae7f8b5986dcfbc55f1a56fa0.jpg",
-          alt: "Traditional South Indian floral garland"
+          alt: "Traditional South Indian floral garland with intricate patterns and rich colors"
         },
         {
           src: "https://i.pinimg.com/736x/67/25/f9/6725f93f253d0c59d0bb64e6e5fc1967.jpg",
-          alt: "Classic bridal wedding garland"
+          alt: "Classic bridal wedding garland with white and gold flowers for a timeless look"
         }
       ];
 
@@ -500,16 +646,25 @@
         const div = document.createElement("div");
         div.className = "item";
         div.setAttribute("data-model", index + 1);
+        div.setAttribute("role", "article");
 
         const img = document.createElement("img");
         img.src = garland.src;
         img.alt = garland.alt;
         img.loading = "lazy";
+        img.width = 280;
+        img.height = 300;
+
+        const modelNumber = document.createElement("div");
+        modelNumber.className = "model-number";
+        modelNumber.textContent = index + 1;
+        modelNumber.setAttribute("aria-hidden", "true");
 
         const h3 = document.createElement("h3");
         h3.textContent = `Model #${index + 1}`;
 
         div.appendChild(img);
+        div.appendChild(modelNumber);
         div.appendChild(h3);
         gallery.appendChild(div);
       });
@@ -527,9 +682,21 @@
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function(e) {
           e.preventDefault();
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth"
-          });
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth"
+            });
+          }
+        });
+      });
+
+      // Remove loading animation when images are loaded
+      const images = document.querySelectorAll('.item img');
+      images.forEach(img => {
+        img.addEventListener('load', () => {
+          img.style.background = 'none';
+          img.style.animation = 'none';
         });
       });
     });
